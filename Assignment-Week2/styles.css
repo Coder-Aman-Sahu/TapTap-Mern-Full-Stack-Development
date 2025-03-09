@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  }
+  
+  .social-selector {
+    position: relative;
+    width: 350px;
+  }
+  
+  .menu-toggle {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 15px 25px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+  }
+  
+  .menu-toggle.active {
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .menu-toggle .icon {
+    margin-right: 15px;
+    font-size: 24px;
+  }
+  
+  .menu-toggle .text {
+    flex-grow: 1;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .menu-toggle .arrow {
+    font-size: 24px;
+    color: white;
+    transition: transform 0.3s ease;
+  }
+  
+  .menu-toggle.active .arrow {
+    transform: rotate(180deg);
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease;
+    backdrop-filter: blur(5px);
+  }
+  
+  .dropdown-menu.active {
+    max-height: 300px;
+  }
+  
+  .dropdown-menu .option {
+    display: flex;
+    align-items: center;
+    padding: 15px 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .dropdown-menu .option:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .dropdown-menu .option .icon {
+    margin-right: 15px;
+    font-size: 24px;
+  }
+  
+  .dropdown-menu .option .text {
+    color: white;
+    font-size: 18px;
+  }
+  
+  .linkedin { color: #0077B5; }
+  .facebook { color: #1877F2; }
+  .youtube { color: #FF0000; }
+  .twitter { color: #1DA1F2; }
